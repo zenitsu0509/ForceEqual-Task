@@ -81,6 +81,22 @@ npm start
 
 The application will be available at `http://localhost:3000`.
 
+## 🔑 **Important: Which API Key Does the App Ask For?**
+
+When you first open the application at `http://localhost:3000`, it will ask you to enter an **API Key**. This is specifically asking for the **APP_API_KEY** (not the OpenAI API key).
+
+### **Frontend Login:**
+- **Required Key**: `APP_API_KEY` 
+- **Where to get it**: Generate using the command below or use the pre-configured one
+- **Pre-configured value**: `10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba`
+
+### **Backend Configuration:**
+- **OPENAI_API_KEY**: Used internally by the server to communicate with OpenAI
+- **JWT_SECRET**: Used for token generation (if implementing JWT auth)
+- **APP_API_KEY**: Used for frontend authentication and API route protection
+
+**Quick Start**: Use `10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba` when the app asks for the API key.
+
 ## API Documentation
 
 ### Authentication
