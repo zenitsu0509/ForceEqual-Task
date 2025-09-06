@@ -75,7 +75,7 @@
 OPENAI_API_KEY=sk-your-openai-api-key-here
 
 # Already configured:
-APP_API_KEY=10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba
+APP_API_KEY=10cf6c05c255e17b7db483e23c14d3f40d6b3e998ae38f91c18eb9ba
 ```
 
 ### 2. Start Application
@@ -86,7 +86,7 @@ Application available at: http://localhost:3000
 
 ### 3. Using the Application
 1. **Open**: http://localhost:3000
-2. **Enter API Key**: When prompted, enter the **APP_API_KEY**: `10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba`
+2. **Enter API Key**: When prompted, enter the **APP_API_KEY**: `10cf6c05c255e17bee6ebfbc7dbb3e998ae38f91c18eb9ba`
    - ⚠️ **Important**: This is the APP_API_KEY, NOT the OpenAI API key
    - The OpenAI API key is used internally by the server
 3. **Upload**: Drag and drop a PDF file
@@ -97,7 +97,7 @@ Application available at: http://localhost:3000
 
 **When the app opens, it asks for**: `APP_API_KEY`
 - **Purpose**: Frontend authentication to access the application
-- **Pre-configured value**: `10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba`
+- **Pre-configured value**: `10cf6c05c255e17b4d3f40d6b3e998ae38f91c18eb9ba`
 - **Where it's used**: Authentication for API routes (`x-api-key` header)
 
 **NOT asked for in the UI**: `OPENAI_API_KEY`
@@ -110,7 +110,7 @@ Application available at: http://localhost:3000
 ### Upload PDF
 ```bash
 curl -X POST http://localhost:3000/api/upload \
-  -H "x-api-key: 10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba" \
+  -H "x-api-key: 10cf6c05c255e17bee6eb3c14d3f40d6b3e998ae38f91c18eb9ba" \
   -F "file=@your-document.pdf"
 ```
 
@@ -118,7 +118,7 @@ curl -X POST http://localhost:3000/api/upload \
 ```bash
 curl -X POST http://localhost:3000/api/ask \
   -H "Content-Type: application/json" \
-  -H "x-api-key: 10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba" \
+  -H "x-api-key: 10cf6c05c255e17bee6e23c14d3f40d6b3e998ae38f91c18eb9ba" \
   -d '{"question": "What is this document about?"}'
 ```
 
