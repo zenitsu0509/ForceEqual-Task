@@ -86,10 +86,24 @@ Application available at: http://localhost:3000
 
 ### 3. Using the Application
 1. **Open**: http://localhost:3000
-2. **API Key**: Enter the pre-configured key: `10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba`
+2. **Enter API Key**: When prompted, enter the **APP_API_KEY**: `10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba`
+   - ⚠️ **Important**: This is the APP_API_KEY, NOT the OpenAI API key
+   - The OpenAI API key is used internally by the server
 3. **Upload**: Drag and drop a PDF file
 4. **Ask**: Type questions about the PDF content
 5. **Review**: Get AI-powered answers with source references
+
+## 🔑 **API Key Clarification**
+
+**When the app opens, it asks for**: `APP_API_KEY`
+- **Purpose**: Frontend authentication to access the application
+- **Pre-configured value**: `10cf6c05c255e17bee6ebfbc7db483e23c14d3f40d6b3e998ae38f91c18eb9ba`
+- **Where it's used**: Authentication for API routes (`x-api-key` header)
+
+**NOT asked for in the UI**: `OPENAI_API_KEY`
+- **Purpose**: Server-side communication with OpenAI API
+- **Where to set**: In the `.env` file only
+- **User never sees this**: Used internally by the backend
 
 ## 🧪 Testing the API
 
